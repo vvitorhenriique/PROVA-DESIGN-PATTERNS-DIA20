@@ -9,8 +9,13 @@ public abstract class Passagem {
         this.tarifa = tarifa; 
     }
 
-    public String getPassageiro() { return passageiro; }
-    public double getTarifa() { return tarifa; }
+    public String getPassageiro() { 
+        return passageiro; 
+    }
+
+    public double getTarifa(){ 
+        return tarifa; 
+    }
 
     public abstract String getModal();
     public abstract double calcularTaxaEmbarque();

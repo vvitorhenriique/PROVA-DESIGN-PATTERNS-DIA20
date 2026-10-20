@@ -1,5 +1,3 @@
-import java.util.Locale;
-
 public abstract class EmissorPassagem {
 
     protected abstract Passagem criarPassagem(String passageiro, double tarifa);
@@ -11,11 +9,10 @@ public abstract class EmissorPassagem {
     }
 
     private void imprimirResumo(Passagem passagem, double taxa) {
-        System.out.println("=== Resumo da emissão ===");
+        System.out.println("=== Resumo da emissao ===");
         System.out.println("Modal: " + passagem.getModal());
         System.out.println("Passageiro: " + passagem.getPassageiro());
-        System.out.println(String.format(Locale.forLanguageTag("pt-BR"),
-                "Taxa de embarque: R$ %.2f", taxa));
+        System.out.printf("Taxa de embarque: R$ %.2f%n", taxa);
         System.out.println("Documentos exigidos: " + String.join("; ", passagem.getDocumentosExigidos()));
         System.out.println();
     }
